@@ -39,6 +39,17 @@ class User {
   firstName!: string | null;
 
   @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  fld1!: string | null;
+
+  @ApiProperty({
     required: true,
     type: String,
   })

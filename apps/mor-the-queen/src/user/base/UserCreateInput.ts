@@ -38,6 +38,17 @@ class UserCreateInput {
   @Field(() => String, {
     nullable: true,
   })
+  fld1?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
   lastName?: string | null;
 
   @ApiProperty({
