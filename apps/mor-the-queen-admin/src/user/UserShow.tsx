@@ -13,6 +13,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
         <TextField label="First Name" source="firstName" />
+        <TextField label="fld1" source="fld1" />
         <TextField label="ID" source="id" />
         <TextField label="Last Name" source="lastName" />
         <TextField label="Roles" source="roles" />
