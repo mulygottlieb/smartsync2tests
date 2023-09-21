@@ -6,6 +6,7 @@ export type UserOrderByInput = {
   fld1?: SortOrder;
   id?: SortOrder;
   lastName?: SortOrder;
+  otherroles?: SortOrder;
   password?: SortOrder;
   roles?: SortOrder;
   updatedAt?: SortOrder;

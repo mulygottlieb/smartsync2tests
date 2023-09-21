@@ -1,5 +1,5 @@
 {
-  "name": "@mor-the-queen/server",
+  "name": "@mor-the-queendf/server",
   "private": true,
   "scripts": {
     "start": "nest start",

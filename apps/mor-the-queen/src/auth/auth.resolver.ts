@@ -5,19 +5,19 @@ import { AuthService } from "./auth.service";
 import { GqlDefaultAuthGuard } from "./gqlDefaultAuth.guard";
 import { UserData } from "./userData.decorator";
 import { LoginArgs } from "./LoginArgs";
-import { UserInfo } from "./UserInfo";
+import { User2Info } from "./User2Info";
 
-@Resolver(UserInfo)
+@Resolver(User2Info)
 export class AuthResolver {
   constructor(private readonly authService: AuthService) {}
-  @Mutation(() => UserInfo)
-  async login(@Args() args: LoginArgs): Promise<UserInfo> {
+  @Mutation(() => User2Info)
+  async login(@Args() args: LoginArgs): Promise<User2Info> {
     return this.authService.login(args.credentials);
   }
 
-  @Query(() => UserInfo)
+  @Query(() => User2Info)
   @common.UseGuards(GqlDefaultAuthGuard, gqlACGuard.GqlACGuard)
-  async userInfo(@UserData() entityInfo: UserInfo): Promise<UserInfo> {
+  async user2Info(@UserData() entityInfo: User2Info): Promise<User2Info> {
     return entityInfo;
   }
 }

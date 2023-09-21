@@ -6,6 +6,7 @@ export type User = {
   fld1: string | null;
   id: string;
   lastName: string | null;
+  otherroles: string | null;
   roles: JsonValue;
   updatedAt: Date;
   username: string;
